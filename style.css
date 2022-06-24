@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap'); /* Google Fonts for Overpass font*/
+
+/* configuring variables for the selected colors*/
+
+:root {
+    --primary: hsl(25, 97%, 53%);
+    --headingColor: hsl(0, 0%, 100%);
+    --textColor: hsl(217, 12%, 63%);
+    --ratingColor: hsl(216, 12%, 54%);
+    --cardColor: hsl(215, 22%, 15%);
+    --bgColor: hsl(216, 12%, 8%);
+    font-size: 15px;
+}
+
+/* Normalizing the page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1.h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+ol,ul {
+    list-style: none;
+}
+
+/* Page Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+main {
+    font-family: 'Overpass', sans-serif;
+    min-height: 98.2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgColor);
+}
+
+.rating-card,.thanks-card {
+    width: 100%;
+    background-color: var(--cardColor);
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 2em 1.5em;
+    opacity: 0.8;
+    max-height: 400px;
+}
+.rating-card {
+    display: block;
+}
+
+.rating-card .rating-icon {
+    border-radius: 50%;
+    line-height: 50%;
+    font-size: .9em;
+    color: var(--primary);
+    background-color: hsl(213, 19%, 18%);
+    padding: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+}
+
+.rating-card h2 {
+    color: var(--headingColor);
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.rating-card p {
+    color: var(--textColor);
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+.rating-card .rating-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.rating-card .rating-list .rating-number {
+    color: var(--ratingColor);
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.rating-card .rating-list .rating-number:hover {
+    background: var(--primary);
+    color: var(--headingColor);
+    cursor: pointer;
+}
+
+.rating-card .rating-list .rating-number.active,
+.rating-card .rating-list .rating-number:focus {
+    background-color: var(--textColor);
+    color: var(--headingColor);
+}
+
+.rating-card a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 2em;
+    color: var(--headingColor);
+    background-color: var(--primary);
+    padding: 0.7em 0;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.rating-card a:hover {
+    color: var(--primary);
+    background-color: var(--headingColor);
+}
+
+
+
+.thanks-card {
+    display: none;
+}
+
+.thanks-card .thanks-img {
+    margin-bottom: 2em;
+}
+
+.thanks-card .thanks-img img {
+   width: 50%;
+   display: block;
+   margin: 0 auto;
+}
+
+.thanks-card .rating-score {
+    color: var(--primary);
+    background-color: hsl(213, 19%, 18%);
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 2em;
+    padding: 0.5em 0;
+    margin-bottom: 2em;
+}
+
+.thanks-card .feedback {
+    text-align: center;
+}
+
+.thanks-card .feedback h2 {
+    color: var(--headingColor);
+    margin-bottom: 0.5em;
+}
+
+.thanks-card .feedback p {
+    color: var(--textColor);
+    line-height: 1.5;
+}
+
+footer {
+    background-color: var(--bgColor);
+}
+.attribution {
+    font-size: 16px;
+    text-align: center;
+    color: var(--headingColor); 
+}
+.attribution a { color: hsl(228, 45%, 44%); 
+    padding-top: 10px;
+}
